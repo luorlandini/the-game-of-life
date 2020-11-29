@@ -1,0 +1,12 @@
+
+.cell, .row {
+    height: 10px;
+}
+
+.cell {
+    background-color: #e9e9eb;
+    display: inline-block;
+    width: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,.6);
+}
