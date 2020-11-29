@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Cell from './components/Cell';
+import Grid from './components/Grid';
 
 function App() {
 
@@ -11,11 +11,14 @@ function App() {
 
   }
 
+  var [r, c] = [50, 50];
+  var m = Array(r).fill().map(() => Array(c).fill(0));
+
   return (
     <div className="App">
       <header className="App-header">
       </header>
-      <Cell rowIdx={10} colIdx={10} clickOnCell={ClickOnCell} />
+      <Grid data={m} />
     </div>
   );
 }
