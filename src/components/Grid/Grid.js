@@ -1,24 +1,28 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { changeArrayValue } from '../../utilities';
 import './Grid.css'
 
-const Grid = ({ data }) => {
+const Grid = ({ data, changeDataGrid }) => {
 
-    console.log('data');
-    console.log(data);
+    const [community, setCommunity] = useState(data)
 
-    const toggleCell = (cell, x, y) => {
-        const { world } = this.props;
-        const row = changeArrayValue(world[y], x, cell ? 0 : 1);
-        const newWorld = changeArrayValue(world, y, row);
-        this.props.onChange(newWorld);
+    useEffect(() => {
+        setCommunity(data);
+    }, [data]);
+
+    const clickOnCell = (cell, x, y) => {
+        const row = changeArrayValue(community[y], x, cell ? 0 : 1);
+        const newComm = changeArrayValue(community, y, row);
+        setCommunity(newComm);
+        changeDataGrid(newComm);
     }
 
     const renderCell = (cell, x, y) => {
         return (
             <div key={x}
                 className='cell'
-                onMouseDown={() => toggleCell(cell, x, y)}
+                onClick={() => clickOnCell(cell, x, y)}
                 style={{ backgroundColor: cell ? '#424151' : null }}
             />
         );
@@ -32,7 +36,7 @@ const Grid = ({ data }) => {
 
     return (
         <div className='grid'>
-            { data.map((row, y) => renderRow(row, y))}
+            { community.map((row, y) => renderRow(row, y))}
         </div>
     )
 
