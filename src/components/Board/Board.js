@@ -43,8 +43,9 @@ class Board extends React.Component {
     render() {
         const { community, playing } = this.state;
         return (
-            <div>
+            <>
                 <Grid data={community} changeDataGrid={this.onChangeGrid} />
+
                 <Controls
                     play={playing}
                     run={this.run}
@@ -52,8 +53,7 @@ class Board extends React.Component {
                     stop={this.stop}
                     random={this.random}
                 />
-
-            </div>
+            </>
         )
     }
 

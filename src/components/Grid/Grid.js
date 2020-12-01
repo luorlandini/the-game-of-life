@@ -23,7 +23,7 @@ const Grid = ({ data, changeDataGrid }) => {
             <div key={x}
                 className='cell'
                 onClick={() => clickOnCell(cell, x, y)}
-                style={{ backgroundColor: cell ? '#424151' : null }}
+                style={{ backgroundColor: cell ? '#172b4d' : null }}
             />
         );
     }
@@ -35,7 +35,7 @@ const Grid = ({ data, changeDataGrid }) => {
     )
 
     return (
-        <div className='grid'>
+        <div class="d-flex flex-row bd-highlight grid">
             { community.map((row, y) => renderRow(row, y))}
         </div>
     )

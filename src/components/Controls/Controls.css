@@ -1,0 +1,12 @@
+/*
+#172b4d
+*/
+.controls{
+    background-color: #172b4d !important;
+}
+
+.controls button{
+    background-color: #e91e63 !important;
+    margin: 5px;
+    border-color: #e91e63;
+}
