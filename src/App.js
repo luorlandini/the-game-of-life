@@ -9,7 +9,7 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-lg-3">
-            <h1 className="mt-5">Game of Life</h1>
+            <h3 className="mt-5 game-title">Game of Life</h3>
             <p>The universe of the Game of Life is an infinite,
             two-dimensional orthogonal grid of square cells,
             each of which is in one of two possible states, live or dead,
@@ -24,8 +24,6 @@ function App() {
       </div>
 
     </section >
-
-
 
   );
 }

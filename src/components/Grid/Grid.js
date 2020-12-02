@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { changeArrayValue } from '../../utilities';
+import PropTypes from 'prop-types'
 import './Grid.css'
 
 const Grid = ({ data, changeDataGrid }) => {
@@ -41,5 +42,17 @@ const Grid = ({ data, changeDataGrid }) => {
     )
 
 }
+Grid.propTypes = {
+
+    data: PropTypes.array.isRequired,
+    changeDataGrid: PropTypes.func,
+
+}
+
+/*
+TolltipInfo.defaultProps = {
+    placement: 'top',
+}
+*/
 
 export default Grid

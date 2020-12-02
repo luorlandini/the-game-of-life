@@ -1,7 +1,9 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import TolltipInfo from '../TooltipInfo';
+import { GAME_RULES } from '../../constants'
 import { FaPlay, FaStop, FaForward, FaRandom, FaTrashAlt, FaReadme } from 'react-icons/fa';
+import PropTypes from 'prop-types'
 
 import './Controls.css'
 
@@ -9,12 +11,7 @@ const Controlls = ({ run, nextGeneretion, stop, random, clear, play }) => {
 
     let startStop = (!play) ? <Button onClick={run}>Play <FaPlay /></Button> : <Button variant="danger" onClick={stop} >Stop <FaStop /></Button>
 
-    let descToolTip = [
-        'Any live cell with fewer than two live neighbours dies, as if by underpopulation.',
-        'Any live cell with two or three live neighbours lives on to the next generation.',
-        'Any live cell with more than three live neighbours dies, as if by overpopulation.',
-        'Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.'
-    ]
+    let descToolTip = GAME_RULES;
 
 
     return (
@@ -35,5 +32,18 @@ const Controlls = ({ run, nextGeneretion, stop, random, clear, play }) => {
 
     )
 }
+
+Controlls.propTypes = {
+
+    run: PropTypes.func.isRequired,
+    nextGeneretion: PropTypes.func.isRequired,
+    stop: PropTypes.func.isRequired,
+    random: PropTypes.func.isRequired,
+    clear: PropTypes.func.isRequired,
+    play: PropTypes.func.isRequired
+
+}
+
+
 
 export default Controlls
