@@ -23,4 +23,6 @@ git client
 
 node >= 10.16.0
 
-yarn or npm
+npm
+
+yarn
