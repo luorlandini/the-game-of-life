@@ -11,10 +11,12 @@ Clone the repo
     $ git clone https://github.com/luorlandini/the-game-of-life.git
 
     $ cd the-game-of-life
+#### Install
 
+    $ yarn install or npm install
 #### Start
 
-    $ yarn start / npm start
+    $ yarn start or npm start
 ### Requirements
 
 git client
