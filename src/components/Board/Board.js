@@ -30,6 +30,7 @@ class Board extends React.Component {
         this.setState({ playing: true });
         this.intervalId = setInterval(() => this.nextGeneretion(), PLAY_TIME);
     }
+    clear = () => this.changeState(createBoard(BOARD_SIZE, DEAD));
 
     stop = () => {
         this.setState({ playing: false });
@@ -52,6 +53,7 @@ class Board extends React.Component {
                     nextGeneretion={this.nextGeneretion}
                     stop={this.stop}
                     random={this.random}
+                    clear={this.clear}
                 />
             </>
         )

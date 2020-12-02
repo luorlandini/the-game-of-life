@@ -1,5 +1,4 @@
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import Board from './components/Board';
 
@@ -10,8 +9,12 @@ function App() {
       <div className="container">
         <div className="row">
           <div className="col-lg-3">
-            <h1 className="mt-5">The Big Picture</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt voluptates rerum eveniet sapiente repellat esse, doloremque quod recusandae deleniti nostrum assumenda vel beatae sed aut modi nesciunt porro quisquam voluptatem.</p>
+            <h1 className="mt-5">Game of Life</h1>
+            <p>The universe of the Game of Life is an infinite,
+            two-dimensional orthogonal grid of square cells,
+            each of which is in one of two possible states, live or dead,
+            Every cell interacts with its eight neighbours, which are the cells that are horizontally, vertically,
+              or diagonally adjacent. </p>
           </div>
 
           <div className="col-lg-9">
