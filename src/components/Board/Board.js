@@ -21,15 +21,15 @@ class Board extends React.Component {
         generation: generation,
     });
 
-    onChangeGrid = (comm) => { this.changeState(comm, this.state.generation + 1) }
+    onChangeGrid = (comm) => this.changeState(comm, this.state.generation + 1)
 
-    nextGeneretion = () => {
-        this.onChangeGrid(nextGeneration(this.state.community));
-    }
+    nextGeneretion = () => this.onChangeGrid(nextGeneration(this.state.community));
+
     run = () => {
         this.setState({ playing: true });
         this.intervalId = setInterval(() => this.nextGeneretion(), PLAY_TIME);
     }
+
     clear = () => this.changeState(createBoard(BOARD_SIZE, DEAD));
 
     stop = () => {
@@ -37,16 +37,13 @@ class Board extends React.Component {
         clearInterval(this.intervalId);
     }
 
-    random = () => {
-        this.changeState(randomize(this.state.community), 0);
-    }
+    random = () => this.changeState(randomize(this.state.community), 0);
 
     render() {
         const { community, playing } = this.state;
         return (
             <>
                 <Grid data={community} changeDataGrid={this.onChangeGrid} />
-
                 <Controls
                     play={playing}
                     run={this.run}
@@ -58,7 +55,6 @@ class Board extends React.Component {
             </>
         )
     }
-
 
 }
 
